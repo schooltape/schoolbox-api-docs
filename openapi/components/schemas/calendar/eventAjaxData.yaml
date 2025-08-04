@@ -1,0 +1,91 @@
+type: object
+properties:
+  meta:
+    type: object
+    properties:
+      eventId:
+        type: integer
+        description: Unique identifier for the event.
+      time:
+        type: string
+        description: Human-readable time range for the event.
+        example: '9:00am–9:00pm'
+      title:
+        type: string
+        description: Title of the event.
+      detail:
+        type: string
+        description: More details about the event.
+      location:
+        type: string
+        description: Location name or description.
+      eventType:
+        type: string
+      variant:
+        type: string
+      type:
+        type: string
+        description: Event category or type.
+        example: 'Sport'
+      author:
+        type: string
+      authorId:
+        type: integer
+      level:
+        type: string
+      completed:
+        type: boolean
+        description: Whether the event is completed.
+      folderName:
+        type: string
+        description: Name of the folder associated with the event.
+      folderId:
+        type: integer
+        description: ID of the folder associated with the event.
+      workType:
+        type: string
+      workTypeId:
+        type: integer
+        description: ID of the work type.
+      weighted:
+        type: integer
+      assessmentType:
+        type: string
+        description: Assessment type.
+        example: 'project'
+      colour:
+        type: string
+        nullable: true
+        description: Colour associated with the event.
+      editable:
+        type: boolean
+        description: Whether the event is editable.
+  links:
+    type: array
+    description: List of related links.
+    items:
+      type: object
+  styles:
+    type: object
+    properties:
+      visible:
+        type: boolean
+        description: Whether the event is visible.
+  attendance:
+    type: object
+    properties:
+      icon:
+        type: boolean
+      status:
+        type: boolean
+      requestButton:
+        type: boolean
+      listButton:
+        type: boolean
+  custom:
+    type: object
+    properties:
+      modifyLink:
+        type: boolean
+      moreDetailsLink:
+        type: string

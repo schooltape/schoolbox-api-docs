@@ -27,7 +27,7 @@ allOf:
           color:
             type: string
             description: CSS colour string
-            example: #ff7537
+            example: '#ff7537'
       roles:
         type: array
         description: Array of role objects

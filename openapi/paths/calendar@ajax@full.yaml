@@ -1,0 +1,43 @@
+get:
+  operationId: getCalendarAjaxFull
+  tags: [calendar]
+  summary: Get full calendar events for a given user
+  description: |
+    Returns a list of calendar events for the user, including classes, pastoral care, ensembles, activities, due work, excursions, assemblies, and other scheduled items.
+  parameters:
+    - name: userId
+      in: query
+      required: true
+      schema:
+        $ref: ../schemas/id.yaml
+      description: The ID of the user for whom to retrieve calendar events.
+    - name: start
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int64
+      description: Unix timestamp representing the start of the date range for which to retrieve calendar events.
+    - name: end
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int64
+      description: Unix timestamp representing the end of the date range for which to retrieve calendar events.
+    - name: componentInstanceId
+      in: query
+      required: false
+      schema:
+        $ref: ../schemas/id.yaml
+    - name: timetableCalendar
+      in: query
+      required: false
+      schema:
+        type: boolean
+      description: If true, only timetable-based events are returned.
+  responses:
+    '200':
+      $ref: ../components/responses/event-list.yaml
+    default:
+      $ref: ../components/responses/problem.yaml

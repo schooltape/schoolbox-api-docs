@@ -1,0 +1,31 @@
+type: array
+items:
+  type: object
+  properties:
+    resourceId:
+      type: string
+      nullable: true
+    title:
+      type: string
+      description: The event title.
+    start:
+      type: string
+      description: Start time or date of the event (ISO 8601).
+    end:
+      type: string
+      description: End time or date of the event (ISO 8601).
+    editable:
+      type: boolean
+      description: Whether the event is editable by the user.
+    allDay:
+      type: boolean
+      description: Whether the event lasts all day.
+    color:
+      type: string
+      description: Hex code for the event color.
+      example: '#ff7537'
+    className:
+      type: string
+    data:
+      $ref: eventAjaxData.yaml
+      description: Additional data related to the event.
