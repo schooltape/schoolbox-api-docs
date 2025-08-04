@@ -2,4 +2,4 @@ description: A list of calendar events
 content:
   application/json:
     schema:
-      $ref: ../schemas/calendar/event-list.yaml
+      $ref: ../schemas/calendar/eventAjax.yaml

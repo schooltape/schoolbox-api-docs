@@ -9,7 +9,7 @@ get:
       in: query
       required: true
       schema:
-        $ref: ../schemas/id.yaml
+        $ref: ../components/schemas/id.yaml
       description: The ID of the user for whom to retrieve calendar events.
     - name: start
       in: query
@@ -29,7 +29,7 @@ get:
       in: query
       required: false
       schema:
-        $ref: ../schemas/id.yaml
+        $ref: ../components/schemas/id.yaml
     - name: timetableCalendar
       in: query
       required: false
