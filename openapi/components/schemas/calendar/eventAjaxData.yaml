@@ -61,10 +61,14 @@ properties:
         type: boolean
         description: Whether the event is editable.
   links:
-    type: array
-    description: List of related links.
-    items:
-      type: object
+    type: object
+    properties:
+      category:
+        type: object
+        properties:
+          id.type: integer
+          name.type: string
+      path.type: string
   styles:
     type: object
     properties:
@@ -89,3 +93,11 @@ properties:
         type: boolean
       moreDetailsLink:
         type: string
+  timetable:
+    type: object
+    properties:
+      code.type: string
+      staff:
+        type: object
+        additionalProperties:
+          type: string
